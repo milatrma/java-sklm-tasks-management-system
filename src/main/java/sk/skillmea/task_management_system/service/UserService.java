@@ -3,12 +3,13 @@ package sk.skillmea.task_management_system.service;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Service;
 import sk.skillmea.task_management_system.model.User;
 import sk.skillmea.task_management_system.service.request.UserAddRequest;
 
 import java.util.List;
 
-
+//@Service
 public interface UserService {
     long add(UserAddRequest request);
     void delete(long id);

@@ -11,18 +11,18 @@ import java.util.List;
 public class UserJdbcRepository {
     private final UserRowMapper userRowMapper;
     private final JdbcTemplate jdbcTemplate;
-    private final static String GET_ALL;
+    private static final String GET_ALL;
 
     static {
         GET_ALL = "SELECT * FROM user";
     }
 
-    public UserJdbcRepository(UserRowMapper userRowMapper, JdbcTemplate jdbcTemplate) {
-        this.userRowMapper = userRowMapper;
+    public UserJdbcRepository(JdbcTemplate jdbcTemplate, UserRowMapper userRowMapper) {
         this.jdbcTemplate = jdbcTemplate;
+        this.userRowMapper = userRowMapper;
     }
 
-    List<User> getAll() {
+    public List<User> getAll() {
         return jdbcTemplate.query(GET_ALL, userRowMapper);
     }
 }
