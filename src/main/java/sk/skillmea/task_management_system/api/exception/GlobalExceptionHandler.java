@@ -23,4 +23,10 @@ public class GlobalExceptionHandler {
         logger.error("Email already exists: {}", ex.getMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
+
+    @ExceptionHandler(InternalErrorException.class)
+    public ResponseEntity<String> emailExists(InternalErrorException ex) {
+        logger.error("Not possible to DELETE: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
 }

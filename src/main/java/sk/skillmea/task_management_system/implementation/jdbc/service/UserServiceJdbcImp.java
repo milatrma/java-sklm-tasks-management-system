@@ -24,7 +24,9 @@ public class UserServiceJdbcImp implements UserService {
 
     @Override
     public void delete(long id) {
-
+        if (this.get(id) != null) {
+            repository.delete(id);
+        }
     }
 
     @Override
