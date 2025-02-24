@@ -1,4 +1,4 @@
-package sk.skillmea.task_management_system.service.request;
+package sk.skillmea.task_management_system.api.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

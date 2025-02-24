@@ -1,17 +1,16 @@
-package sk.skillmea.task_management_system.service.request;
+package sk.skillmea.task_management_system.api.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import sk.skillmea.task_management_system.model.TaskStatus;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TaskEditRequest {
-
+public class TaskAddRequest {
+    private long userId;
+    private Long projectId;
     private String name;
     private String description;
-    private TaskStatus status;
 
 }

@@ -4,8 +4,8 @@ package sk.skillmea.task_management_system.implementation.jdbc.service;
 import org.springframework.stereotype.Service;
 import sk.skillmea.task_management_system.implementation.jdbc.repository.UserJdbcRepository;
 import sk.skillmea.task_management_system.model.User;
-import sk.skillmea.task_management_system.service.UserService;
-import sk.skillmea.task_management_system.service.request.UserAddRequest;
+import sk.skillmea.task_management_system.api.UserService;
+import sk.skillmea.task_management_system.api.request.UserAddRequest;
 
 import java.util.List;
 
@@ -13,13 +13,13 @@ import java.util.List;
 public class UserServiceJdbcImp implements UserService {
     private final UserJdbcRepository repository;
 
-    public UserServiceJdbcImp(UserJdbcRepository userJdbcRepository) {
-        this.repository = userJdbcRepository;
+    public UserServiceJdbcImp(UserJdbcRepository repository) {
+        this.repository = repository;
     }
 
     @Override
     public long add(UserAddRequest request) {
-        return 0;
+        return repository.add(request);
     }
 
     @Override

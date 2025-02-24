@@ -1,10 +1,9 @@
-package sk.skillmea.task_management_system.service;
+package sk.skillmea.task_management_system.api;
 
 import sk.skillmea.task_management_system.model.Task;
 import sk.skillmea.task_management_system.model.TaskStatus;
-import sk.skillmea.task_management_system.service.request.TaskAddRequest;
-import sk.skillmea.task_management_system.service.request.TaskEditRequest;
-import sk.skillmea.task_management_system.service.request.UserAddRequest;
+import sk.skillmea.task_management_system.api.request.TaskAddRequest;
+import sk.skillmea.task_management_system.api.request.TaskEditRequest;
 
 import java.util.List;
 
