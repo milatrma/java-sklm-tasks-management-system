@@ -1,3 +1,4 @@
+/*
 package sk.skillmea.task_management_system.api.exception;
 
 import org.slf4j.Logger;
@@ -30,3 +31,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 }
+*/
